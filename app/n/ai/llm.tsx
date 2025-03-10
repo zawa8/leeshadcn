@@ -65,7 +65,7 @@ export function LLM() {
 
         // Animate through the network
         const newActiveNodes = [];
-        const newActiveConnections = [];
+        const newActiveConnections : any[] = [];
 
         // Add input node
         if (step >= 1) {
