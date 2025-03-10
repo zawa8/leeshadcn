@@ -118,7 +118,6 @@ export function LLM() {
 
         setActiveNodes(newActiveNodes);
         setActiveConnections((prevConnections) => {
-          // @ts-ignore
           const newConnections = [...prevConnections, ...newActiveConnections];
           return Array.from(new Set(newConnections));
         });
