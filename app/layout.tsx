@@ -3,19 +3,19 @@ import type { Metadata } from 'next';
 import { ViewTransitions } from 'next-view-transitions';
 import { Analytics } from '@vercel/analytics/react';
 
-import { ing115_font } from '@/fonts';
+import { hindi15b } from "@/components/lifonts/localfonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leerob.com'),
+  metadataBase: new URL('https://zawa8.vercel.app'),
   alternates: { canonical: '/', },
-  title: { default: 'vimAl kumar', template: '%s | vimAl kumar', },
+  title: { default: 'wimxl kumAr', template: '%s | wimxl kumAr', },
   description: 'frontend developer, optimist, community builder.',
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${ing115_font.className}`}>
+      <html lang="en" className={`${hindi15b.className}`}>
         <body className="antialiased tracking-tight">
           <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
             <main className="max-w-[60ch] mx-auto w-full space-y-6">
@@ -33,8 +33,8 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
 function Footer() {
   const links = [
     { name: '@etphor', url: 'https://x.com/etphor' },
-    { name: 'fAcebook', url: 'https://www.fb.com/ztrabc' },
-    { name: 'github', url: 'https://github.com/zava8' },
+    { name: 'facebook', url: 'https://www.fb.com/ztrabc' },
+    { name: 'github', url: 'https://github.com/zawa8' },
   ];
   return (
     <footer className="mt-12 text-center">
