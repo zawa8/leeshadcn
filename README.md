@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+not working giwing/showing error :
+/app/n/ai/tokenization.tsx:128:15
+Type error: Type 'string | Token' is not assignable to type 'ReactNode | MotionValue<number> | MotionValue<string>'
 ## Getting Started
 
 First, run the development server:

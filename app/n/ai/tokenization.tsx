@@ -3,10 +3,7 @@
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface Token {
-  text: string;
-  value: string;
-}
+interface Token { text: string; value: string; }
 
 interface Step {
   id: number;
@@ -17,52 +14,26 @@ interface Step {
 }
 
 const steps: Step[] = [
-  {
-    id: 1,
-    text: 'San Francisco',
-    description: 'Original Text',
-  },
-  {
-    id: 2,
-    text: 'San_Francisco',
-    description: 'Replace Space with Underscore',
-  },
-  {
-    id: 3,
-    tokens: ['_San', '_Fran', 'c', 'is', 'co'],
-    description: 'Split into Subwords',
-  },
+  { id: 1, text: 'San Francisco', description: 'Original Text', },
+  { id: 2, text: 'San_Francisco', description: 'Replace Space with Underscore', },
+  { id: 3, tokens: ['_San', '_Fran', 'c', 'is', 'co'], description: 'Split into Subwords', },
   {
     id: 4,
-    tokens: [
-      { text: '_San', value: '1234' },
-      { text: '_Fran', value: '5678' },
-      { text: 'c', value: '90' },
-      { text: 'is', value: '11' },
-      { text: 'co', value: '22' },
-    ],
+    tokens: [ { text: '_San', value: '1234' }, { text: '_Fran', value: '5678' }, { text: 'c', value: '90' }, { text: 'is', value: '11' }, { text: 'co', value: '22' }, ],
     description: 'Map Subword to ID',
   },
-  {
-    id: 5,
-    tensor: [1234, 5678, 90, 11, 22],
-    description: 'Create Tensor',
-  },
+  { id: 5, tensor: [1234, 5678, 90, 11, 22], description: 'Create Tensor', },
 ];
 
 export function Tokenization() {
   const [currentStep, setCurrentStep] = React.useState(1);
   const [isPlaying, setIsPlaying] = React.useState(true);
   const [speed, setSpeed] = React.useState(1);
-
   React.useEffect(() => {
     if (!isPlaying) return;
-
     const timer = setInterval(() => {
       setCurrentStep((prev) => {
-        if (prev === steps.length) {
-          return 1;
-        }
+        if (prev === steps.length) { return 1; }
 
         return prev + 1;
       });
