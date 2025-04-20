@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { ViewTransitions } from 'next-view-transitions';
 import { Analytics } from '@vercel/analytics/react';
 
-import { hindi15b } from "@/components/lifonts/localfonts";
+import { hindienglosoftw8asc } from "@/components/lifonts/localfonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zawa8.vercel.app'),
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${hindi15b.className}`}>
+      <html lang="en" className={`${hindienglosoftw8asc.className}`}>
         <body className="antialiased tracking-tight">
           <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
             <main className="max-w-[60ch] mx-auto w-full space-y-6">
